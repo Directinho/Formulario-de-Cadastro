@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+  <meta charset="UTF-8">
+  <title>Cadastro</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h2>Formulário de Cadastro</h2>
+    <h3>📝</h3>
+    <h4>Dos mesmos criadores de <a href="https://github.com/Directinho/Lista-de-Tarefas">📝Lista de Tarefa</a></h4>
+    <h5>Se você não lembra é: Gabriel da Silva, Henrique Luiz e Thiago Alexandre👍</h5> 
+    <div class="color-picker-container">
+      <h6>Mudar Background</h6>
+      <label for="colorbg" class="form-label rainbow-text">Cores Legais</label>
+      <input type="color" class="form-control form-control-color" id="colorbg" value="#ffffff" title="Choose your color">
+    </div>
+  </header>
+
+  <div class="container">
+    <form id="formCadastro">
+      <div class="mb-3">
+        <label for="nome" class="form-label">🗣Nome</label>
+        <input type="text" id="nome" class="form-control input">
+      </div>
+
+      <div class="mb-3">
+        <label for="email" class="form-label">✉Email</label>
+        <input type="email" id="email" class="form-control input">
+      </div>
+
+      <div class="mb-3 password-container">
+        <label class="form-label">🔒Senha</label>
+        <div class="position-relative">
+          <input type="password" id="senha" class="form-control input">
+          <button type="button" id="mostrarPassword" class="position-absolute top-50 end-0 translate-middle-y me-2">
+            👁 Mostrar senha
+          </button>
+        </div>
+        <div id="senhaFeedback" class="form-text text-danger d-none">🔏A senha precisa ter 8+ caracteres</div>
+      </div>
+
+      <button type="submit" class="btn btn-light">📤Cadastrar</button>
+      <p id="mensagemErro" class="text-danger mt-2 d-none">😡Preencha todos os campos corretamente.</p>
+    </form>
+
+    <section>
+      <h4>👥Número de Usuários: <span class="contador">0</span></h4>
+      <h3>👤Usuários Cadastrados:</h3>
+      <div id="listaUsuarios" class="postit-container">
+        <!-- post-its aparecerão aqui -->
+      </div>
+    </section>
+
+  <script src="script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+</body>
+</html>
